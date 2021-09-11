@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDs9ZLYsNwRSYnVYHhltkWUCDOEBfW3xl8",
+            authDomain: "teammanagementt.firebaseapp.com",
+            projectId: "teammanagementt",
+            storageBucket: "teammanagementt.appspot.com",
+            messagingSenderId: "104168123628",
+            appId: "1:104168123628:web:c48f6d1770ddf58969c9c9"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+<body onload="dashboard()">
+
+    <div class="dboard">
+        <h3 id="userName">TEAMS</h3>
+        <button class="logout" onclick="logout()">Logout</button>
+
+        <div class="ownTeams">
+            <h1>Teams you own</h1>
+
+            <div class="team">
+                <p class="teamName" id="developers">Developers</p>
+                <p><b>Members:</b> <span id="users1"></span></p>
+            </div>
+
+        </div>
+        
+        <div class="partOfTeams">
+            <h1>Teams you're part of</h1>
+            
+            <div class="team">
+                <p class="teamName" id="uiUxDesigners">UI/UX Designers</p>
+                <p><b>Members:</b> <span id="users2"></span></p>
+            </div>
+            <!-- <div class="team">
+                <p class="teamName">Leads</p>
+                <p><b>Members:</b> <span id="users3"></span></p>
+            </div> -->
+
+            <!-- <div class="team">
+                <p class="teamName">Animators</p>
+                <p><b>Members:</b> <span id="users4"></span></p>
+            </div> -->
+
+
+        </div>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            Create Team
+        </button>
+        <a href="ownerView.html">
+            <button type="button" class="btn btn-primary">
+                Go to Questions
+            </button>
+        </a>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Creat Team</h5>
+                        <button class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-boday">
+                        <input type="text" placeholder="Team Name" id="userName2">
+                    </div>
+                    <div class="modal-boday">
+                        <select id="category2">
+                            <option value="">Category</option>
+                            <option value="Developers">Developers</option>
+                            <option value="UI/UX Designers">UI/UX Designers</option>
+                        </select>
+                    </div>
+                    <div class="modal-boday">
+                        <input type="email" placeholder="Members (Type Email)" id="userEmail2">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" data-dismiss="modal" id="creatTeam">Creat</button>
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

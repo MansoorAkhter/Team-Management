@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner View</title>
+    <link rel="stylesheet" href="ownerView.css">
+</head>
+
+<body>
+    <div class="main">
+        <p class="headng">Team / Owner view</p>
+        <div class="reports">
+            <button class="rptBtn" onclick="rptBtn()">Reports</button>
+            <button class="setBtn" onclick="setBtn()">Settings</button>
+            <hr>
+            <div class="selection">
+                <select id="allMembers">
+                    <option value="">All Members</option>
+                    <option value="Developers">Mansoor Akhter</option>
+                    <option value="Designers">Sufiyan</option>
+                    <option value="Animators">Mohsin Shehzad</option>
+                    <option value="Team Lead">Saqib Hussain</option>
+                </select>
+                <input type="date" id="calender">
+            </div>
+            <div class="allQA">
+                <p id="u1">Mansoor Akhter: 05-Sep</p>
+                <div class="quesAns">
+                    <p class="q1">Q: What did you do today?</p>
+                    <p class="a1">A: Nothing.</p>
+                    <p class="q2">Q: What will you do tomorrow?</p>
+                    <p class="a2">A: Nothing.</p>
+                    <p class="q3">Q: Are there amy blockers on your way?</p>
+                    <p class="a3">A: No.</p>
+                </div>
+
+                <p id="u2">Umar: 05-Sep <span>| Not submitted yet</span></p>
+                <div class="quesAns">
+                    <p class="q1">Q: What did you do today?</p>
+                    <p class="a1">A: </p>
+                    <p class="q2">Q: What will you do tomorrow?</p>
+                    <p class="a2">A: </p>
+                    <p class="q3">Q: Are there amy blockers on your way?</p>
+                    <p class="a3">A: </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- On Development -->
+        
+        <!-- <div class="settings">
+            <h4>Questions:</h4>
+            <div class="typeQues">
+                <input type="text" placeholder="Question 1:  Type here">
+                <input type="text" placeholder="Question 2:  Type here">
+                <input type="text" placeholder="Question 3:  Type here">
+            </div>
+            <h4>Reminder Time:</h4>
+            <div class="reminder">
+                <input type="time" id="clock">
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox">Exclude Weekends</label>
+            </div>
+            <h4>Members:</h4>
+        </div> -->
+    </div>
+</body>
+
+</html>

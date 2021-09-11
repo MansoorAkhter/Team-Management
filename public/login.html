@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDs9ZLYsNwRSYnVYHhltkWUCDOEBfW3xl8",
+            authDomain: "teammanagementt.firebaseapp.com",
+            projectId: "teammanagementt",
+            storageBucket: "teammanagementt.appspot.com",
+            messagingSenderId: "104168123628",
+            appId: "1:104168123628:web:c48f6d1770ddf58969c9c9"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1>Login Account</h1>
+        <div class="signupLogin">
+            <button class="SignupLink"> <a href="signup.html">Signup</a></button>
+            <button class="LoginLink"> <a href="login.html">Login</a></button>
+        </div>
+
+        <div class="email">
+            <input type="email" placeholder="Email Id" id="email" required>
+        </div>
+        <div class="pass">
+            <input type="password" placeholder="Password" id="password" required>
+        </div>
+        <!-- <div class="cnfrm-pass">
+            <input type="password" placeholder="Confirm Password" id="password" required>
+        </div> -->
+        <input type="button" class="submit" value="Login" onclick="loginFunc()">
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
